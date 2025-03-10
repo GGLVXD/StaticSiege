@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://epl4nf2ftpx0"]
+[gd_scene load_steps=2 format=3 uid="uid://epl4nf2ftpx0"]
+
+[ext_resource type="Script" uid="uid://b8kbjpv4pdrse" path="res://Scripts/Home/play.gd" id="1_ig7tw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,10 +19,13 @@ offset_bottom = 73.0
 theme_override_font_sizes/font_size = 37
 text = "StaticSiege"
 
-[node name="Button" type="Button" parent="."]
+[node name="play" type="Button" parent="."]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 86.0
 offset_right = 397.0
 offset_bottom = 123.0
 text = "Play"
+script = ExtResource("1_ig7tw")
+
+[connection signal="pressed" from="play" to="play" method="_on_play_pressed"]
